@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+    .stick-figure {
+      position: relative;
+      width: 200px;
+      height: 400px;
+    }
+
+    .head {
+      width: 50px;
+      height: 50px;
+      background-color: transparent;
+      border: 2px solid black;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 75px;
+    }
+    .body {
+      position: absolute;
+      width: 4px;
+      height: 150px;
+      background-color: black;
+      top: 50px;
+      left: 98px;
+    }
+    .arm {
+      position: absolute;
+      width: 80px;
+      height: 4px;
+      background-color: black;
+      top: 80px;
+    }
+    .arm.left {
+      left: 20px;
+      transform-origin: right;
+      transform: rotate(30deg);
+    }
+    .arm.right {
+      right: 20px;
+      transform-origin: left;
+      transform: rotate(-30deg);
+    }
+    .hand {
+      width: 10px;
+      height: 10px;
+      background-color: gold;
+      border-radius: 50%;
+      position: absolute;
+      top: -3px;
+    }
+    .hand.left {
+      left: -5px;
+    }
+    .hand.right {
+      right: -5px;
+    }
+    .leg {
+      position: absolute;
+      width: 4px;
+      height: 100px;
+      background-color: black;
+      top: 189px;
+    }
+    .leg.left {
+      left: 73px;
+      transform: rotate(30deg);
+    }
+    .leg.right {
+      left: 124px;
+      transform: rotate(-30deg);
+    }
+
+    .ball {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      animation: juggle 0.5s alternate infinite;
+    }
+
+    .ball1 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      animation: juggle1 0.75s alternate infinite;
+    }
+
+    .ball2 {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      position: absolute;
+      animation: juggle2 1s alternate infinite;
+      }
+    
+      @keyframes juggle {
+        0% {
+        transform: translate(70px, 40px);
+      }
+      50% {
+        transform: translate(0px, -150px);
+      }
+      100% {
+        transform: translate(-70px, 40px);
+      }
+    }
+
+    @keyframes juggle1 {
+        0% {
+        transform: translate(70px, 40px);
+      }
+      50% {
+        transform: translate(0px, -150px);
+      }
+      100% {
+        transform: translate(-70px, 40px);
+      }
+    }
+
+
+    @keyframes juggle2 {
+        0% {
+        transform: translate(-70px, 40px);
+      }
+      50% {
+        transform: translate(0px, -150px);
+      }
+      100% {
+        transform: translate(70px, 40px);
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="stick-figure">
+    <div class="head"></div>
+    <div class="body"></div>
+    <div class="arm left"><div class="hand left"></div></div>
+    <div class="arm right"><div class="hand right"></div></div>
+    <div class="leg left"></div>
+    <div class="leg right"></div>
+    <div class="ball" style="top: -20px; left: 90px;"></div>
+    <div class="ball1" style="top: -20px; left: 90px;"></div>
+    <div class="ball2" style="top: -20px; left: 90px;"></div>
+  </div>
+</body>
+</html>
